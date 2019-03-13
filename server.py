@@ -43,7 +43,9 @@ def song_search():
   else:
       song = 'Not Valid Song'
       
-    song_search = sp.new_releases(song
+      song_search = sp.new_releases(song=song, limit=5, offset=0)
+      
+      return jsonify(song_search)
 
 if __name__ == '__main__':
     app.run()
