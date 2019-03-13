@@ -33,6 +33,17 @@ def new_releases():
     
     # Return the list of new releases
     return jsonify(new_releases)
+  
+@app.route('/song_search', methods=['GET'])
+def song_search():
+  
+
+  if 'song' in request.args:
+      song = request.args['song']
+  else:
+      song = 'Not Valid Song'
+      
+    song_search = sp.new_releases(song
 
 if __name__ == '__main__':
     app.run()
