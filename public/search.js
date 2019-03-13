@@ -3,10 +3,10 @@
     event.preventDefault();
     
     $('#new-releases').empty();
-    let text = $('select').val();
-    
+    let text = $('search-box').val();
+    alert(text);
 //     // Send a request to our backend (server.py) to get new releases for the currently selected country
-    $.get('/new_releases?' + $.param({country: country}), function(new_releases) {
+    $.get('/song_search?' + $.param({country: country}), function(new_releases) {
       
 //       // Loop through each album in the list
 //       new_releases.albums.items.forEach(function(release) {

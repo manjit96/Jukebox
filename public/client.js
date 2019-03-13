@@ -36,7 +36,7 @@ $(function() {
 //     let country = $('select').val();
     
 //     // Send a request to our backend (server.py) to get new releases for the currently selected country
-//     $.get('/new_releases?' + $.param({country: country}), function(new_releases) {
+    $.get('/new_releases?' + $.param({country: country}), function(new_releases) {
       
 //       // Loop through each album in the list
 //       new_releases.albums.items.forEach(function(release) {
